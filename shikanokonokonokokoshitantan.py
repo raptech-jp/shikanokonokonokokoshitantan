@@ -21,8 +21,8 @@ weights = {
 state = 'し'
 result = [state]
 
-# 最大14文字の文字列を生成、空白が出たら終了
-while len(result) < 14:
+# 空白が出たら終了
+while True:
     next_state = random.choices(
         transitions[state],
         weights = weights.get(state, [1])
